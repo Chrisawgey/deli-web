@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0; /* Black text */
+  --background-start-rgb: 239, 236, 215; /* 'efecd7' background color */
+  --background-end-rgb: 239, 236, 215; /* 'efecd7' background color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0; /* Black text even in dark mode */
+    --background-start-rgb: 239, 236, 215; /* Same background color in dark mode */
+    --background-end-rgb: 239, 236, 215;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
